@@ -10,11 +10,11 @@ import { Badge } from "@/components/ui/badge";
 export default function Projects() {
     const projects = [
         {
-            title: "E-Commerce Platform",
-            description: "A full-stack e-commerce application featuring user authentication, product catalog, shopping cart, and Stripe payment integration.",
-            techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
-            github: "https://github.com",
-            live: "https://example.com"
+            title: "Consistency OS",
+            description: "A comprehensive habit tracking application featuring dynamic streak calendars and user-specific habit completion data visualization.",
+            techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma"],
+            github: "https://github.com/Rupam18/consistency-os",
+            live: "https://consistency-os.vercel.app"
         },
         {
             title: "Task Management API",
