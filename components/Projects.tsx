@@ -17,11 +17,11 @@ export default function Projects() {
             live: "https://consistency-os.vercel.app"
         },
         {
-            title: "Task Management API",
-            description: "A robust RESTful API built for managing tasks and projects. Includes JWT authentication, pagination, and data validation.",
-            techStack: ["Node.js", "Express", "MongoDB", "Mongoose", "Jest"],
-            github: "https://github.com",
-            live: "" // Assuming no live link for API
+            title: "SaaS Platform",
+            description: "A multi-tenant task management system featuring JWT authentication, role-based access control, and PostgreSQL with Redis caching for performance optimization.",
+            techStack: ["React", "Spring Boot", "PostgreSQL", "Tailwind CSS", "Redis"],
+            github: "https://github.com/Rupam18/saas-platform",
+            live: "https://saas-platform-olive.vercel.app/"
         },
         {
             title: "Real-time Chat App",
