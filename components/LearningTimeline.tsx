@@ -67,15 +67,15 @@ export default function LearningTimeline() {
                             >
                                 <Card className="bg-card/50 backdrop-blur-sm border-card-border hover:border-accent/40 hover:shadow-xl hover:shadow-accent/5 transition-all duration-300">
                                     <CardHeader className="pb-3">
-                                        <div className="flex items-center justify-between mb-1">
-                                            <span className="text-sm font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <span className="text-xs sm:text-sm font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">
                                                 {item.day}
                                             </span>
                                         </div>
-                                        <CardTitle className="text-xl font-bold">{item.title}</CardTitle>
+                                        <CardTitle className="text-lg md:text-xl font-bold">{item.title}</CardTitle>
                                     </CardHeader>
                                     <CardContent>
-                                        <p className="text-muted leading-relaxed">
+                                        <p className="text-sm md:text-base text-muted leading-relaxed">
                                             {item.description}
                                         </p>
                                     </CardContent>

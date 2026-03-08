@@ -43,7 +43,7 @@ export default function Hero() {
                     transition={{ duration: 0.5, type: "spring" }}
                     className="mb-8"
                 >
-                    <Badge variant="outline" className="px-4 py-1.5 text-sm border-accent/30 text-accent bg-accent/5 backdrop-blur-sm">
+                    <Badge variant="outline" className="px-4 py-1.5 text-xs sm:text-sm border-accent/30 text-accent bg-accent/5 backdrop-blur-sm">
                         <span className="relative flex h-2 w-2 mr-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
@@ -53,16 +53,16 @@ export default function Hero() {
                 </motion.div>
 
                 <motion.h1
-                    className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6"
+                    className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
                 >
-                    Hi, I&apos;m <span className="text-white drop-shadow-[0_0_25px_rgba(56,189,248,0.6)]">Rupam Kumar Sarangi</span>
+                    Hi, I&apos;m <span className="block sm:inline text-white drop-shadow-[0_0_25px_rgba(56,189,248,0.6)] mt-2 sm:mt-0">Rupam Kumar Sarangi</span>
                 </motion.h1>
 
                 <motion.h2
-                    className="text-xl md:text-3xl text-muted font-medium mb-8 max-w-3xl"
+                    className="text-lg sm:text-xl md:text-3xl text-muted font-medium mb-8 max-w-3xl px-4 sm:px-0"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
@@ -71,7 +71,7 @@ export default function Hero() {
                 </motion.h2>
 
                 <motion.p
-                    className="text-lg text-muted/80 max-w-2xl mb-12 leading-relaxed"
+                    className="text-base sm:text-lg text-muted/80 max-w-2xl mb-12 leading-relaxed px-4 sm:px-0"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
@@ -81,18 +81,18 @@ export default function Hero() {
                 </motion.p>
 
                 <motion.div
-                    className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
+                    className="flex flex-col sm:flex-row gap-4 w-full px-6 sm:px-0 sm:w-auto"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                    <Button size="lg" className="rounded-full px-8 bg-foreground text-background hover:bg-foreground/90 group" asChild>
+                    <Button size="lg" className="rounded-full w-full sm:w-auto px-8 bg-foreground text-background hover:bg-foreground/90 group" asChild>
                         <a href="#projects">
                             View Projects
                             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </a>
                     </Button>
-                    <Button size="lg" variant="outline" className="rounded-full px-8 border-card-border bg-background/50 backdrop-blur-sm hover:bg-accent/10 hover:text-accent hover:border-accent/30 transition-all" asChild>
+                    <Button size="lg" variant="outline" className="rounded-full w-full sm:w-auto px-8 border-card-border bg-background/50 backdrop-blur-sm hover:bg-accent/10 hover:text-accent hover:border-accent/30 transition-all" asChild>
                         <a href="#contact">
                             Contact Me
                             <Mail className="ml-2 h-4 w-4" />

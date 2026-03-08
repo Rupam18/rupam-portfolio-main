@@ -48,7 +48,7 @@ export default function Skills() {
                     subtitle="Technologies and tools I work with to bring ideas to life."
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mt-8 md:mt-12">
                     {skillCategories.map((category, idx) => (
                         <motion.div
                             key={category.title}
@@ -58,8 +58,8 @@ export default function Skills() {
                             transition={{ duration: 0.5, delay: idx * 0.1 }}
                         >
                             <Card className="h-full bg-background/50 border-card-border hover:border-accent/30 transition-colors backdrop-blur-sm group">
-                                <CardHeader>
-                                    <CardTitle className="text-xl flex items-center gap-3">
+                                <CardHeader className="pb-4">
+                                    <CardTitle className="text-lg md:text-xl flex items-center gap-3">
                                         <span className="h-8 w-8 rounded-lg bg-accent/10 flex items-center justify-center text-accent text-sm font-mono group-hover:bg-accent group-hover:text-background transition-colors">
                                             0{idx + 1}
                                         </span>

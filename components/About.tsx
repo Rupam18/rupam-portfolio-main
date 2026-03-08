@@ -33,13 +33,13 @@ export default function About() {
                     subtitle="A glimpse into who I am and what drives my passion for development."
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5 }}
-                        className="space-y-6 text-lg text-muted/90"
+                        className="space-y-4 md:space-y-6 text-base md:text-lg text-muted/90"
                     >
                         <p>
                             Hello! I&apos;m <span className="text-foreground font-semibold">Rupam Kumar Sarangi</span>, a B.Tech student with an insatiable curiosity for software engineering.

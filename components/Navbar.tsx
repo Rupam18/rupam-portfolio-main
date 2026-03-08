@@ -25,10 +25,22 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+        e.preventDefault();
+        setMobileMenuOpen(false); // Close the menu
+
+        const targetId = href.replace('#', '');
+        const elem = document.getElementById(targetId);
+        if (elem) {
+            // Smoothly scroll to the target section
+            elem.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
-        <header className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${isScrolled ? "bg-background/80 backdrop-blur-md border-card-border py-4" : "bg-transparent border-transparent py-6"}`}>
+        <header className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${isScrolled ? "bg-background/80 backdrop-blur-md border-card-border py-4" : "bg-transparent border-transparent py-4 md:py-6"}`}>
             <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-                <a href="#home" className="flex items-center gap-2 group">
+                <a href="#home" onClick={(e) => scrollToSection(e, '#home')} className="flex items-center gap-2 group z-50">
                     <Terminal className="text-accent h-6 w-6 group-hover:rotate-12 transition-transform" />
                     <span className="font-mono font-bold text-xl tracking-tighter">Rupam<span className="text-accent">.dev</span></span>
                 </a>
@@ -39,6 +51,7 @@ export default function Navbar() {
                         <motion.a
                             key={link.name}
                             href={link.href}
+                            onClick={(e) => scrollToSection(e, link.href)}
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
@@ -52,32 +65,37 @@ export default function Navbar() {
 
                 {/* Mobile Nav Toggle */}
                 <button
-                    className="md:hidden text-foreground"
+                    className="md:hidden text-foreground z-50 relative p-2"
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
-                    {mobileMenuOpen ? <X /> : <Menu />}
+                    {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                 </button>
             </div>
 
-            {/* Mobile Menu */}
+            {/* Mobile Menu Overlay */}
             <AnimatePresence>
                 {mobileMenuOpen && (
                     <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-card border-b border-card-border overflow-hidden"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.2 }}
+                        className="md:hidden fixed inset-0 top-[60px] md:top-[73px] bg-background border-b border-card-border overflow-y-auto h-[calc(100vh-60px)]"
                     >
-                        <nav className="flex flex-col py-4 px-6 gap-4">
-                            {navLinks.map((link) => (
-                                <a
+                        <div className="absolute inset-0 bg-background z-[-1]" /> {/* Extra solid layer to prevent bleed */}
+                        <nav className="flex flex-col py-8 px-6 gap-6 h-full items-center justify-start mt-10">
+                            {navLinks.map((link, i) => (
+                                <motion.a
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: i * 0.1 }}
                                     key={link.name}
                                     href={link.href}
-                                    onClick={() => setMobileMenuOpen(false)}
-                                    className="text-muted hover:text-accent font-medium py-2 transition-colors"
+                                    onClick={(e) => scrollToSection(e, link.href)}
+                                    className="text-2xl font-semibold text-foreground hover:text-accent transition-colors w-full text-center py-2"
                                 >
                                     {link.name}
-                                </a>
+                                </motion.a>
                             ))}
                         </nav>
                     </motion.div>

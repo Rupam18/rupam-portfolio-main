@@ -56,11 +56,11 @@ export default function Projects() {
                                     <Folder className="h-12 w-12 text-muted/30 group-hover:scale-125 group-hover:text-accent/50 transition-all duration-700" />
                                 </div>
 
-                                <CardHeader className="flex-grow">
-                                    <CardTitle className="text-2xl font-bold group-hover:text-accent transition-colors">
+                                <CardHeader className="flex-grow pb-3">
+                                    <CardTitle className="text-xl md:text-2xl font-bold group-hover:text-accent transition-colors">
                                         {project.title}
                                     </CardTitle>
-                                    <CardDescription className="text-muted/90 mt-2 leading-relaxed">
+                                    <CardDescription className="text-sm md:text-base text-muted/90 mt-2 leading-relaxed">
                                         {project.description}
                                     </CardDescription>
                                 </CardHeader>

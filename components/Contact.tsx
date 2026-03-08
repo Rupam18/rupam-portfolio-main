@@ -56,13 +56,13 @@ export default function Contact() {
                     subtitle="Feel free to reach out for collaborations, opportunities, or just to say hi!"
                 />
 
-                <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mt-16">
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 md:gap-12 mt-12 md:mt-16">
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5 }}
-                        className="lg:col-span-2 space-y-8"
+                        className="lg:col-span-2 space-y-6 md:space-y-8"
                     >
                         <div>
                             <h3 className="text-2xl font-bold text-foreground mb-4">Let&apos;s talk about everything!</h3>
