@@ -14,7 +14,7 @@ export default function Projects() {
             description: "A comprehensive habit tracking application featuring dynamic streak calendars and user-specific habit completion data visualization.",
             techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma"],
             github: "https://github.com/Rupam18/consistency-os",
-            live: "https://consistency-os.vercel.app"
+            live: "https://consistency-os-pzkf.vercel.app/"
         },
         {
             title: "SaaS Platform",
