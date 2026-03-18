@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import { Code2, PenTool, Database } from "lucide-react";
+import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function About() {
@@ -60,13 +61,17 @@ export default function About() {
                         className="relative"
                     >
                         {/* Abstract visual placeholder for profile image / decoration */}
-                        <div className="aspect-square rounded-2xl bg-gradient-to-br from-card to-card-border/50 border border-card-border p-8 relative overflow-hidden group shadow-2xl">
+                        <div className="aspect-square rounded-2xl bg-gradient-to-br from-card to-card-border/50 border border-card-border relative overflow-hidden group shadow-2xl">
                             <div className="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl" />
                             <div className="absolute -right-20 -top-20 w-64 h-64 bg-accent/30 rounded-full blur-3xl group-hover:bg-accent/40 transition-colors" />
                             <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-blue-600/30 rounded-full blur-3xl group-hover:bg-blue-600/40 transition-colors" />
 
-                            <div className="h-full w-full border border-dashed border-accent/20 rounded-xl flex items-center justify-center text-muted relative z-10 bg-background/40 backdrop-blur-md">
-                                <span className="font-mono text-sm">[ Profile Image / Graphic ]</span>
+                            <div className="h-full w-full relative z-10 overflow-hidden rounded-xl">
+                                <img
+                                    src="/IMG_0092.jpg"
+                                    alt="Rupam Kumar Sarangi"
+                                    className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                />
                             </div>
                         </div>
                     </motion.div>

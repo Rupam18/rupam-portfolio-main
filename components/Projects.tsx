@@ -24,11 +24,11 @@ export default function Projects() {
             live: "https://saas-platform-olive.vercel.app/"
         },
         {
-            title: "Real-time Chat App",
-            description: "A real-time messaging application allowing users to create rooms, send text messages, and share media securely.",
-            techStack: ["React", "Socket.io", "Express", "Tailwind CSS"],
-            github: "https://github.com",
-            live: "https://example.com"
+            title: "AI Resume Analyzer",
+            description: "A full-stack AI-powered resume analyzer that evaluates resumes using Groq API (Llama 3). Simulates ATS behavior, providing structured scoring and career improvement insights.",
+            techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Groq API", "Llama 3"],
+            github: "https://github.com/Rupam18/ai-resume-analyzer",
+            live: "https://ai-resume-analyzer-two-drab.vercel.app/"
         }
     ];
 
